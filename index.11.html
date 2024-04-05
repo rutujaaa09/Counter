@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Counter App</title>
+	<link rel="stylesheet" href="counterstyle.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Counter App</h1>
+		<div id="counter-value">0</div><br>
+		<div class="counter">
+		<button id="increment-btn">increment</button>
+		<button id="decrement-btn">decrement</button>
+		</div>
+		<button id="reset">Reset</button>
+	</div>
+
+	<script >
+   let counter = 0;
+    const counterValue = document.getElementById('counter-value');
+    const incrBtn = document.getElementById('increment-btn');
+    const decreBtn = document.getElementById('decrement-btn');
+    const resetBtn = document.querySelector('#reset');
+
+    incrBtn.addEventListener('click', () => {
+	counter++;
+	counterValue.innerHTML = counter;
+    });
+
+    decreBtn.addEventListener('click', () => {
+	counter--;
+	counterValue.innerHTML = counter;
+    });
+    
+    
+    resetBtn.addEventListener('click', reset);
+
+    function reset() {
+	counter = 0;
+	counterValue.innerHTML = counter;
+    }</script>
+</body>
+
+</html>
